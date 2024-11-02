@@ -1,0 +1,98 @@
+local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/VeaMSRZK"))()
+
+OrionLib:MakeNotification({
+                    Name = "空脚本", 
+                    Content = "欢迎使用空脚本",
+                    Time = 10 -- 持续时间
+                })    
+                local sound = Instance.new("Sound", workspace)
+sound.SoundId = "rbxassetid://4590662766"
+sound:Play()
+wait(1)
+OrionLib:MakeNotification({
+                    Name = "空脚本", 
+                    Content = "你的注入器是:"..identifyexecutor(),
+                    Time = 10 -- 持续时间
+                })    
+                local sound = Instance.new("Sound", workspace)
+sound.SoundId = "rbxassetid://4590662766"
+sound:Play()
+wait(1)
+OrionLib:MakeNotification({
+                    Name = "空脚本", 
+                    Content = "你的用户名是:"..game.Players.LocalPlayer.Character.Name,
+                    Time = 10 -- 持续时间
+                })    
+                local sound = Instance.new("Sound", workspace)
+sound.SoundId = "rbxassetid://4590662766"
+sound:Play()
+
+local Window = OrionLib:MakeWindow({Name = "空脚本", HidePremium = false, SaveConfig = true,IntroText = "空脚本", ConfigFolder = "123"})
+local announcement = Window:MakeTab({
+    Name = "公告",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+announcement:AddParagraph("作者","225")
+announcement:AddLabel("你使用的注入器:"..identifyexecutor())
+announcement:AddLabel("你的用户名是:"..game.Players.LocalPlayer.Character.Name)
+announcement:AddLabel("禁止倒卖倒卖死妈")
+announcement:AddButton({
+	Name = "QQ群704547855点击复制",
+	Callback = function()
+setclipboard("704547855")
+end
+})    
+local main = Window:MakeTab({
+    Name = "主要",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+main:AddTextbox({
+	Name = "移动速度",
+	Default = "", -- 默认值
+	TextDisappear = true,
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+end
+})
+main:AddTextbox({
+	Name = "跳跃高度",
+	Default = "", -- 默认值
+	TextDisappear = true,
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+end
+})
+main:AddTextbox({
+	Name = "重力",
+	Default = "", -- 默认值
+	TextDisappear = true,
+	Callback = function(Value)
+game.Workspace.Gravity = Value
+end
+})
+main:AddButton({
+	Name = "飞行V3",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sjsjsjsjjs225/-/refs/heads/main/%E9%A3%9E%E8%A1%8CV3"))()
+end
+})   
+main:AddButton({
+  Name = "光影",
+  Default = false,
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
+  end
+})
+local DOORS = Window:MakeTab({
+    Name = "DOORS",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+}) 
+DOORS:AddButton({
+	Name = "DOORS-MS脚本(英文版)",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
+end
+})  
