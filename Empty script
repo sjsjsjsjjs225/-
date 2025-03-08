@@ -15,7 +15,7 @@ sound:Play()
 wait(1)
 
 print("UI加载成功✅")
-print("弹出-空脚本-UI测试页")
+print("弹出(空脚本-UI测试页)")
 
 OrionLib:MakeNotification({
                     Name = "空脚本", 
@@ -65,12 +65,19 @@ local announcement = Window:MakeTab({
 announcement:AddParagraph("作者","sjsjsjsjjs225")
 announcement:AddLabel("你的注入器是:"..identifyexecutor())
 announcement:AddLabel("你的用户名是:"..game.Players.LocalPlayer.Character.Name)
-announcement:AddLabel("禁止倒卖倒卖死妈")
 announcement:AddButton({
 	Name = "QQ群979483258点击复制",
 	Callback = function()
-print("执行(复制979483258)")
+print("执行(复制979483258)并弹出(复制成功-你已复制QQ群号)")
 setclipboard("979483258")
+OrionLib:MakeNotification({
+                    Name = "复制成功", 
+                    Content = "你已复制QQ群号",
+                    Time = 10 -- 持续时间
+                })    
+                local sound = Instance.new("Sound", workspace)
+sound.SoundId = "rbxassetid://4590662766"
+sound:Play()
 end
 })    
 
@@ -183,4 +190,3 @@ end
 })    
 
 print("创建分类(OtherScripts-其他脚本)")
-
