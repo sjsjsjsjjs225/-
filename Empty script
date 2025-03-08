@@ -31,6 +31,28 @@ print("弹出(空脚本-欢迎使用空脚本)")
 
 OrionLib:MakeNotification({
                     Name = "空脚本", 
+                    Content = "防反挂机已自动启动",
+                    Time = 10 -- 持续时间
+                })    
+                local sound = Instance.new("Sound", workspace)
+sound.SoundId = "rbxassetid://4590662766"
+sound:Play()
+wait(1)
+print("防反挂机✅")
+
+print("弹出(空脚本-防反挂机已自动启动)")
+
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+    vu:Button2Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+    wait(1)
+    vu:Button2Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
+end)
+
+print("执行(防反挂机)")
+
+OrionLib:MakeNotification({
+                    Name = "空脚本", 
                     Content = "你的注入器是:"..identifyexecutor(),
                     Time = 10 -- 持续时间
                 })    
@@ -115,20 +137,18 @@ print("执行(修改重力)")
 game.Workspace.Gravity = Value
 end
 })
-currency:AddButton({
-	Name = "测试注入器等级键盘按F9查看",
-	Callback = function()
-print("执行(测试注入器等级键盘按F9查看)")
-getgenv().printidentity = nil printidentity()
-end
-})   
-currency:AddButton({
-	Name = "测试注入器UNC键盘按F9查看",
-	Callback = function()
-print("执行(测试注入器UNC键盘按F9查看)")
-loadstring(game:HttpGet("https://pastebin.com/raw/aR4dJHGT"))()
-end
-})   
+currency:AddToggle({
+	Name = "夜视",
+	Default = false,
+	Callback = function(Value)
+    if Value then
+	    game.Lighting.Ambient = Color3.new(1, 1, 1)
+    else
+	    game.Lighting.Ambient = Color3.new(0, 0, 0)
+    end
+    print("执行(夜视)")
+	end
+})
 currency:AddButton({
 	Name = "飞行V3",
 	Callback = function()
@@ -144,6 +164,20 @@ print("执行(光影)")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
   end
 })
+currency:AddButton({
+	Name = "测试注入器等级键盘按F9查看",
+	Callback = function()
+print("执行(测试注入器等级)")
+getgenv().printidentity = nil printidentity()
+end
+})   
+currency:AddButton({
+	Name = "测试注入器UNC键盘按F9查看",
+	Callback = function()
+print("执行(测试注入器UNC)")
+loadstring(game:HttpGet("https://pastebin.com/raw/aR4dJHGT"))()
+end
+})   
 
 print("创建分类(currency-通用)")
 
