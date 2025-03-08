@@ -29,7 +29,7 @@ sound:Play()
 
 local Window = OrionLib:MakeWindow({Name = "空脚本", HidePremium = false, SaveConfig = true,IntroText = "空脚本", ConfigFolder = "123"})
 local announcement = Window:MakeTab({
-    Name = "公告",
+    Name = "主页",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -44,7 +44,7 @@ setclipboard("704547855")
 end
 })    
 local main = Window:MakeTab({
-    Name = "主要",
+    Name = "通用",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -75,7 +75,7 @@ end
 main:AddButton({
 	Name = "飞行V3",
 	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/sjsjsjsjjs225/-/refs/heads/main/%E9%A3%9E%E8%A1%8CV3"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sjsjsjsjjs225/-/refs/heads/main/FLY-V3"))()
 end
 })   
 main:AddButton({
