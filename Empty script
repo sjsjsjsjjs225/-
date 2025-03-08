@@ -126,14 +126,14 @@ currency:AddButton({
 	Name = "测试注入器UNC键盘按F9查看",
 	Callback = function()
 print("执行(测试注入器UNC键盘按F9查看)")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/sjsjsjsjjs225/-/refs/heads/main/UNC-TEST"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/aR4dJHGT"))()
 end
 })   
 currency:AddButton({
 	Name = "飞行V3",
 	Callback = function()
 print("执行(飞行V3)")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/sjsjsjsjjs225/-/refs/heads/main/FLY-V3"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/nkhg0q5K"))()
 end
 })   
 currency:AddButton({
