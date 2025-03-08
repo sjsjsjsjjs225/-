@@ -1,5 +1,22 @@
 local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/j9TdK86G"))()
 
+print("初始化成功✅")
+print("脚本已运行")
+print("版本号为0.1.0")
+
+OrionLib:MakeNotification({
+                    Name = "空脚本", 
+                    Content = "UI测试页",
+                    Time = 10 -- 持续时间
+                })    
+                local sound = Instance.new("Sound", workspace)
+sound.SoundId = "rbxassetid://4590662766"
+sound:Play()
+wait(1)
+
+print("UI加载成功✅")
+print("弹出-空脚本-UI测试页")
+
 OrionLib:MakeNotification({
                     Name = "空脚本", 
                     Content = "欢迎使用空脚本",
@@ -9,6 +26,9 @@ OrionLib:MakeNotification({
 sound.SoundId = "rbxassetid://4590662766"
 sound:Play()
 wait(1)
+
+print("弹出(空脚本-欢迎使用空脚本)")
+
 OrionLib:MakeNotification({
                     Name = "空脚本", 
                     Content = "你的注入器是:"..identifyexecutor(),
@@ -18,6 +38,9 @@ OrionLib:MakeNotification({
 sound.SoundId = "rbxassetid://4590662766"
 sound:Play()
 wait(1)
+
+print("弹出(空脚本-你的注入器是...)")
+
 OrionLib:MakeNotification({
                     Name = "空脚本", 
                     Content = "你的用户名是:"..game.Players.LocalPlayer.Character.Name,
@@ -27,64 +50,96 @@ OrionLib:MakeNotification({
 sound.SoundId = "rbxassetid://4590662766"
 sound:Play()
 
+print("弹出(空脚本-你的用户名是...)")
+
 local Window = OrionLib:MakeWindow({Name = "空脚本", HidePremium = false, SaveConfig = true,IntroText = "空脚本", ConfigFolder = "123"})
+
+print("脚本加载成功✅")
+print("创建主UI(空脚本-空脚本-123)")
+
 local announcement = Window:MakeTab({
     Name = "主页",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-announcement:AddParagraph("作者","225")
-announcement:AddLabel("你使用的注入器:"..identifyexecutor())
+announcement:AddParagraph("作者","sjsjsjsjjs225")
+announcement:AddLabel("你的注入器是:"..identifyexecutor())
 announcement:AddLabel("你的用户名是:"..game.Players.LocalPlayer.Character.Name)
 announcement:AddLabel("禁止倒卖倒卖死妈")
 announcement:AddButton({
-	Name = "QQ群704547855点击复制",
+	Name = "QQ群979483258点击复制",
 	Callback = function()
-setclipboard("704547855")
+print("执行(复制979483258)")
+setclipboard("979483258")
 end
 })    
-local main = Window:MakeTab({
+
+print("创建分类(announcement-主页)")
+
+local currency = Window:MakeTab({
     Name = "通用",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-main:AddTextbox({
+currency:AddTextbox({
 	Name = "移动速度",
 	Default = "", -- 默认值
 	TextDisappear = true,
 	Callback = function(Value)
+print("执行(修改移动速度)")
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
 end
 })
-main:AddTextbox({
+currency:AddTextbox({
 	Name = "跳跃高度",
 	Default = "", -- 默认值
 	TextDisappear = true,
 	Callback = function(Value)
+print("执行(修改跳跃高度)")
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
 end
 })
-main:AddTextbox({
+currency:AddTextbox({
 	Name = "重力",
 	Default = "", -- 默认值
 	TextDisappear = true,
 	Callback = function(Value)
+print("执行(修改重力)")
 game.Workspace.Gravity = Value
 end
 })
-main:AddButton({
+currency:AddButton({
+	Name = "测试注入器等级键盘按F9查看",
+	Callback = function()
+print("执行(测试注入器等级键盘按F9查看)")
+getgenv().printidentity = nil printidentity()
+end
+})   
+currency:AddButton({
+	Name = "测试注入器UNC键盘按F9查看",
+	Callback = function()
+print("执行(测试注入器UNC键盘按F9查看)")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sjsjsjsjjs225/-/refs/heads/main/UNC-TEST"))()
+end
+})   
+currency:AddButton({
 	Name = "飞行V3",
 	Callback = function()
+print("执行(飞行V3)")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/sjsjsjsjjs225/-/refs/heads/main/FLY-V3"))()
 end
 })   
-main:AddButton({
+currency:AddButton({
   Name = "光影",
   Default = false,
   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
+print("执行(光影)")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
   end
 })
+
+print("创建分类(currency-通用)")
+
 local DOORS = Window:MakeTab({
     Name = "DOORS",
 	Icon = "rbxassetid://4483345998",
@@ -93,6 +148,39 @@ local DOORS = Window:MakeTab({
 DOORS:AddButton({
 	Name = "DOORS-MS脚本(英文版)",
 	Callback = function()
+print("执行(DOORS-MS脚本(英文版))")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
 end
 })  
+
+print("创建分类(DOORS-DOORS)")
+
+local OtherScripts = Window:MakeTab({
+    Name = "其他脚本",
+	Icon = "rbxassetid://4483345998", -- roblox图片ID
+	PremiumOnly = false
+})
+OtherScripts:AddButton({
+	Name = "崩脚本",
+	Callback = function()
+print("执行(崩脚本)")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/2344XDDDD/BEN-scrpit/refs/heads/main/BEN"))()
+end
+})    
+OtherScripts:AddButton({
+	Name = "XK脚本中心",
+	Callback = function()
+print("执行(XK脚本中心)")
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\66\73\78\106\105\97\111\98\122\120\54\47\66\73\78\106\105\97\111\47\109\97\105\110\47\88\75\46\84\88\84\34\41\41\40\41\10")()
+end
+})    
+OtherScripts:AddButton({
+	Name = "禁漫中心",
+	Callback = function()
+print("执行(禁漫中心)")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/anlushanjinchangantangwanle/main/jmjmjmjmjmjmjmjmjmjmjmjmjmjmjmjm.lua"))()
+end
+})    
+
+print("创建分类(OtherScripts-其他脚本)")
+
